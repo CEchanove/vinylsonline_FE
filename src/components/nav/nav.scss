@@ -1,0 +1,56 @@
+@import '../../variables.scss';
+
+nav{
+    padding: 2%;
+    background-image: linear-gradient(to bottom, #000 55%, rgba(255,255,255,0));
+    background-image: -webkit-gradient(linear(to bottom, #000 55%, rgba(255,255,255,0)));
+    background-image: -moz-linear-gradient(to bottom, #000 55%, rgba(255,255,255,0));
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img{
+        width: 5%;
+        filter: drop-shadow(0 0 10px #fff);
+        cursor: pointer;
+    }
+    #navigation{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: #fff;
+        width: 50%;
+        h4{
+            font-family: vinyl,sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: .3rem;
+            cursor: pointer;
+            transition: .5s;
+            &:hover{
+                transform: scale(1.2);
+                color: $red;
+            }
+        }
+    }
+    .menu{
+        filter: none;
+        display: none;
+    }
+    @media(max-width: $mobile){
+        padding: 1%;
+        img{
+            width: 12%;
+        }
+        #navigation{
+            width: 80%;
+            h4{
+                font-size: .9rem;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+}
